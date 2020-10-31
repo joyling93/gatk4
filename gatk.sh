@@ -1,3 +1,5 @@
+#!/bin/bash
+sample='K'
 #BQSR --known-sites 不用绝对路径会神奇报错
 time gatk BaseRecalibrator -R "/data/xzm/ref/gatk4/hg38/Homo_sapiens_assembly38.fasta" -I "./20201030/output/${sample}.sorted.markdup.bam" --known-sites "/data/xzm/ref/gatk4/hg38/dbsnp_138.hg38.vcf.gz" --known-sites "/data/xzm/ref/gatk4/hg38/Mills_and_1000G_gold_standard.indels.hg38.vcf.gz" --known-sites "/data/xzm/ref/gatk4/hg38/1000G_phase1.snps.high_confidence.hg38.vcf.gz" -O "./20201030/output/recal_data_${sample}.table"
 
