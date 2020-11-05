@@ -1,6 +1,6 @@
 #!bin bash
 #samples=()
-for sample in "@"
+for sample in "$@"
 do
 	echo "${sample}:\n"
 	vcftools --gzvcf "${sample}" --depth --stdout
